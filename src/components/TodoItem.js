@@ -17,13 +17,31 @@ export default function TodoItem({
       <span className="flex-fill">
         {todo.content} {todo.done && '✅'}
       </span>
-      <button className="btn btn-primary mr-15" onClick={toggleTodo}>
+      <button
+        className="btn btn-primary mr-15"
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleTodo();
+        }}
+      >
         Valider
       </button>
-      <button className="btn btn-primary mr-15" onClick={editTodo}>
+      <button
+        className="btn btn-primary mr-15"
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleTodo();
+        }}
+      >
         Modifier
       </button>
-      <button className="btn btn-reverse-primary" onClick={deleteTodo}>
+      <button
+        className="btn btn-reverse-primary"
+        onClick={(e) => {
+          e.stopPropagation();
+          deleteTodo();
+        }}
+      >
         Supprimer
       </button>
     </li>
