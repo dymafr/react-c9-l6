@@ -30,7 +30,7 @@ export default function TodoItem({
         className="btn btn-primary mr-15"
         onClick={(e) => {
           e.stopPropagation();
-          toggleTodo();
+          editTodo();
         }}
       >
         Modifier
