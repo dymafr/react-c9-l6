@@ -1,8 +1,19 @@
 import React from 'react';
 
-export default function TodoItem({ todo, deleteTodo, toggleTodo, editTodo }) {
+export default function TodoItem({
+  todo,
+  deleteTodo,
+  toggleTodo,
+  editTodo,
+  selectTodo,
+}) {
   return (
-    <li className="mb-10 d-flex justify-content-center align-items-center p-10">
+    <li
+      onClick={selectTodo}
+      className={`mb-10 d-flex flex-row justify-content-center align-items-center p-10 ${
+        todo.selected ? 'selected' : ''
+      }  `}
+    >
       <span className="flex-fill">
         {todo.content} {todo.done && '✅'}
       </span>
